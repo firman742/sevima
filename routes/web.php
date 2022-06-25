@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ValueController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('backend.dashboard');
+    return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::resource('nilai', ValueController::class);
+
+
 
 require __DIR__.'/auth.php';

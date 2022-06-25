@@ -15,7 +15,7 @@
               </div>
           </div>
           <a href="/dashboard">
-              <img class="img-fluid" style="width:150px; margin-right:5px;"  src="{{ asset('backend/assets/images/logodarussalam5.png') }}" alt="Theme-Logo" />
+              <img class="img-fluid" style="width:150px; margin-right:5px;"  src="{{ asset('assets/images/logodarussalam5.png') }}" alt="Theme-Logo" />
           </a>
           <a class="mobile-options">
               <i class="ti-more"></i>
@@ -88,7 +88,7 @@
               
               <li class="user-profile header-notification">
                   <a href="#!" class="text-decoration-none">
-                      <img src="{{ asset('backend/assets/images/avatar-4.jpg') }}" class="img-radius" alt="User-Profile-Image">
+                      <img src="{{ asset('assets/images/avatar-4.jpg') }}" class="img-radius" alt="User-Profile-Image">
                       <span ></span>
                       <i class="ti-angle-down"></i>
                   </a>

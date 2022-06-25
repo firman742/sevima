@@ -43,6 +43,8 @@
                                 name="password_confirmation" required />
             </div>
 
+            
+
             <div class="d-flex align-items-center justify-content-between mt-4">
                 <a class="text-decoration-none" href="{{ route('login') }}">
                     {{ __('Already registered?') }}

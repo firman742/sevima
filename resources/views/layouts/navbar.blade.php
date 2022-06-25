@@ -94,17 +94,17 @@
         </ul>
         <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Forms &amp; Tables</div>
         <ul class="pcoded-item pcoded-left-item">
-            <li class="{{ Request::is('madidas') ? 'active' : '' }}">
-                <a href="/madidas">
+            <li class="{{ Request::is('tugas') ? 'active' : '' }}">
+                <a href="/tugas">
                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Madidas</span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Tugas</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
-            <li class="{{ Request::is('kategori') ? 'active' : '' }}">
-                <a href="/kategori">
+            <li class="{{ Request::is('nilai') ? 'active' : '' }}">
+                <a href="/nilai">
                     <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Kategori</span>
+                    <span class="pcoded-mtext" data-i18n="nav.form-components.main">Nilai</span>
                     <span class="pcoded-mcaret"></span>
                 </a>
             </li>
