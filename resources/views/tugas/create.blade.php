@@ -21,65 +21,67 @@
             <div class="page-body">
                 <div class="card">
                     <div class="card-block">
-                        <form action="/tugas" method="POST" enctype="multipart/form-data">
-                            @csrf
-                            <div class="mb-3 row">
-                                <label for="inputJudul" class="col-sm-2 col-form-label">Nama Tugas</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control @error('nama_tugas') is-invalid @enderror" id="inputJudul" name="nama_tugas" required autofocus value="{{ old('nama_tugas') }}">
-                                    
-                                    @error('nama_tugas')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
+                        <div class="border border-dashed p-10">
+                            <form action="/tugas" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <div class="mb-3 row">
+                                    <label for="inputJudul" class="col-sm-2 col-form-label">Nama Tugas</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control @error('nama_tugas') is-invalid @enderror" id="inputJudul" name="nama_tugas" required autofocus value="{{ old('nama_tugas') }}">
+                                        
+                                        @error('nama_tugas')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
-                                    @enderror
                                 </div>
-                            </div>
 
-                            <div class="mb-3 row">
-                                <label for="inputIsi" class="col-sm-2 col-form-label">Mata Pelajaran</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control @error('mata_pelajaran') is-invalid @enderror" id="inputJudul" name="mata_pelajaran" required autofocus value="{{ old('mata_pelajaran') }}">
-                                    
-                                    @error('mata_pelajaran')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
+                                <div class="mb-3 row">
+                                    <label for="inputIsi" class="col-sm-2 col-form-label">Mata Pelajaran</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control @error('mata_pelajaran') is-invalid @enderror" id="inputJudul" name="mata_pelajaran" required autofocus value="{{ old('mata_pelajaran') }}">
+                                        
+                                        @error('mata_pelajaran')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
-                                    @enderror
                                 </div>
-                            </div>
 
-                            <div class="mb-3 row">
-                                <label for="inputIsi" class="col-sm-2 col-form-label">Pengajar</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control @error('pengajar') is-invalid @enderror" id="inputJudul" name="pengajar" required autofocus value="{{ old('pengajar') }}">
-                                    
-                                    @error('pengajar')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
+                                <div class="mb-3 row">
+                                    <label for="inputIsi" class="col-sm-2 col-form-label">Pengajar</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control @error('pengajar') is-invalid @enderror" id="inputJudul" name="pengajar" required autofocus value="{{ old('pengajar') }}">
+                                        
+                                        @error('pengajar')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
-                                    @enderror
                                 </div>
-                            </div>
 
-                            <div class="mb-3 row">
-                                <label for="inputPenulis" class="col-sm-2 col-form-label">Kelas</label>
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control @error('kelas') is-invalid @enderror" id="inputJudul" name="kelas" required autofocus value="{{ old('kelas') }}">
-                                    
-                                    @error('kelas')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
+                                <div class="mb-3 row">
+                                    <label for="inputPenulis" class="col-sm-2 col-form-label">Kelas</label>
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control @error('kelas') is-invalid @enderror" id="inputJudul" name="kelas" required autofocus value="{{ old('kelas') }}">
+                                        
+                                        @error('kelas')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                        @enderror
                                     </div>
-                                    @enderror
                                 </div>
-                            </div>
-                           
-                           
-                            <div class="mb-2 text-end">
-                                <button class="btn btn-warning" type="submit">kirim</button>
-                            </div>
-                        </form>    
+                            
+                            
+                                <div class="mb-2 text-end">
+                                    <button class="btn btn-warning" type="submit">kirim</button>
+                                </div>
+                            </form>    
+                        </div>
                     </div>    
                 </div>
             </div>

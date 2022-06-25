@@ -61,8 +61,8 @@
                 </div>
                 <div class=" card-block table-border-style">
                     <div class="table-responsive">
-                        <table class="table">
-                            <thead>
+                        <table class="table table-striped">
+                            <thead class="fs-6 fw-bold">
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Santri</th>
@@ -73,7 +73,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="border-bottom-2 border-dashed fs-9 fw-light align-middle">
                                 @php
                                     $i = 1 ; 
                                 @endphp
