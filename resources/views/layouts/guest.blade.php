@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Bootstrap -->
-
         <!-- Styles -->
         <link rel="icon" href="{{ asset('assets/images/favicon.ico') }}" type="image/x-icon">
         <!-- Google font-->
@@ -26,7 +25,6 @@
         <!-- Style.css -->
         <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.mCustomScrollbar.css') }}">
-
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
@@ -39,7 +37,7 @@
             </div>
         </div>
 
-          <!-- Required Jquery -->
+        <!-- Required Jquery -->
        <script type="text/javascript" src="{{ asset('js/jquery/jquery.min.js') }}"></script>
        <script type="text/javascript" src="{{ asset('js/jquery-ui/jquery-ui.min.js') }}"></script>
        <script type="text/javascript" src="{{ asset('js/popper.js/popper.min.js') }}"></script>

@@ -83,7 +83,6 @@
                                     <th>{{ $task->mata_pelajaran }}</th>
                                     <th>{{ $task->pengajar }}</th>
                                     <th>{{ $task->kelas }}</th>
-
                                     <th>
                                         <a href="/tugas/{{ $task->id }}/edit" class="btn btn-success rounded "><i class="fa fa-edit"></i></a>
                                         <form action="/tugas/{{ $task->id }}" method="post" class="d-inline">
@@ -97,22 +96,6 @@
                             </tbody>
                         </table>
                     </div>
-                    <nav aria-label="Page navigation example  ">
-                        <ul class="pagination pt-3">
-                            {{-- <li class="page-item ">
-                                <a class="page-link" href="{{ $madidas->previousPageUrl() }}"> Previous</a>
-                                <a href="{{ $madidas->previousPageUrl() }}"></a>
-                            </li>
-                            @for($i=1;$i<= $madidas->lastPage();$i++)
-                            <li class="page-item {{ Request::input('page') == $i ? 'active' : '' }}">
-                                <a class="page-link" href="{{$madidas->url($i)}}">{{$i}}</a>
-                            </li>
-                            @endfor
-                            <li class="page-item">
-                                <a class="page-link" href="{{$madidas->nextPageUrl()}}">Next</a>
-                            </li> --}}
-                        </ul>
-                    </nav>
                 </div>
             </div>
             <!-- Basic table card end -->

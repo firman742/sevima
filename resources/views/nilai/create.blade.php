@@ -36,6 +36,7 @@
                                         @enderror
                                     </div>
                                 </div>
+
                                 <div class="mb-3 row">
                                     <label for="inputPenulis" class="col-sm-2 col-form-label">Kelas</label>
                                     <div class="col-sm-10">
@@ -48,6 +49,7 @@
                                         @enderror
                                     </div>
                                 </div>
+
                                 <div class="row mb-3">
                                     <label for="image" class="col-sm-2 col-form-label">Mata Pelajaran</label>
                                     <div class="col-sm-10">
@@ -73,6 +75,7 @@
                                         @enderror
                                     </div>
                                 </div>
+
                                 <div class="mb-3 row">
                                     <label for="inputIsi" class="col-sm-2 col-form-label">Pengajar</label>
                                     <div class="col-sm-10">
@@ -85,6 +88,7 @@
                                         @enderror
                                     </div>
                                 </div>
+                                
                                 <div class="mb-2 text-end">
                                     <button class="btn btn-warning" type="submit">kirim</button>
                                 </div>

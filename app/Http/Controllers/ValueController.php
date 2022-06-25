@@ -20,7 +20,6 @@ class ValueController extends Controller
         //     abort(403);
         // }
 
-        //
         $data['values'] = Value::orderBy('id','desc')->paginate(5);
         return view('nilai.index', $data);
     }
@@ -112,9 +111,7 @@ class ValueController extends Controller
     public function destroy($id)
     {
         Value::where('id',$id)->delete();
-            
         // alihkan halaman ke halaman pegawai
-  
         return redirect('/nilai')->with('delete','value has been deleted');
     }
 }

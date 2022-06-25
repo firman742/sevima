@@ -15,7 +15,6 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
         $data['tasks'] = Task::orderBy('id','desc')->paginate(5);
         return view('tugas.index', $data);
     }
@@ -106,9 +105,7 @@ class TaskController extends Controller
     public function destroy($id)
     {
         Task::where('id',$id)->delete();
-            
         // alihkan halaman ke halaman pegawai
-  
         return redirect('/tugas')->with('delete','task has been deldted');
     }
 }
