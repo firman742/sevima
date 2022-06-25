@@ -110,6 +110,6 @@ class ValueController extends Controller
             
         // alihkan halaman ke halaman pegawai
   
-        return redirect('/nilai')->with('delete','Postingan Telah Dihapus');
+        return redirect('/nilai')->with('delete','value has been deldted');
     }
 }

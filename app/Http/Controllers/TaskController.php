@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Task;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -15,6 +16,8 @@ class TaskController extends Controller
     public function index()
     {
         //
+        $data['tasks'] = Task::orderBy('id','desc')->paginate(5);
+        return view('tugas.index', $data);
     }
 
     /**
@@ -24,7 +27,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        return view('tugas.create');
     }
 
     /**
@@ -35,7 +38,16 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'nama_tugas' => 'required',
+            'mata_pelajaran' => 'required',
+            'pengajar' => 'required',
+            'kelas' => 'required',
+        ]);
+
+        Task::create($validateData);
+        return redirect('tugas')->with('success' , 'new task has been added');
+
     }
 
     /**
@@ -57,7 +69,10 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        //
+        $task = Task::where('id',$id)->first();
+        return view('tugas.edit',[
+            'task' => $task
+        ]);
     }
 
     /**
@@ -69,7 +84,17 @@ class TaskController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validateData = $request->validate([
+            'nama_tugas' => 'required',
+            'mata_pelajaran' => 'required',
+            'pengajar' => 'required',
+            'kelas' => 'required',
+        ]);
+
+        Task::find($id)
+        ->update($validateData);
+
+        return redirect('tugas')->with('success' , 'new task has been added');
     }
 
     /**
@@ -80,6 +105,10 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Task::where('id',$id)->delete();
+            
+        // alihkan halaman ke halaman pegawai
+  
+        return redirect('/tugas')->with('delete','task has been deldted');
     }
 }
