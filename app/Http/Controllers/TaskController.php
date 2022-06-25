@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Value;
 use Illuminate\Http\Request;
 
-class ValueController extends Controller
+class TaskController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,6 @@ class ValueController extends Controller
     public function index()
     {
         //
-        $data['values'] = Value::orderBy('id','desc')->paginate(5);
-        return view('nilai.index', $data);
     }
 
     /**
@@ -27,7 +24,7 @@ class ValueController extends Controller
      */
     public function create()
     {
-        return view('nilai.create');
+        //
     }
 
     /**
@@ -38,16 +35,7 @@ class ValueController extends Controller
      */
     public function store(Request $request)
     {
-        $validateData = $request->validate([
-            'nama_santri' => 'required',
-            'kelas' => 'required',
-            'mata_pelajaran' => 'required',
-            'nilai' => 'required',
-            'pengajar' => 'required',
-        ]);
-
-        Value::create($validateData);
-        return redirect('nilai')->with('success' , 'new value has been added');
+        //
     }
 
     /**
@@ -69,10 +57,7 @@ class ValueController extends Controller
      */
     public function edit($id)
     {
-        $value = Value::where('id',$id)->first();
-        return view('nilai.edit',[
-            'value' => $value
-        ]);
+        //
     }
 
     /**
@@ -84,18 +69,7 @@ class ValueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $validateData = $request->validate([
-            'nama_santri' => 'required',
-            'kelas' => 'required',
-            'mata_pelajaran' => 'required',
-            'nilai' => 'required',
-            'pengajar' => 'required',
-        ]);
-
-        Value::find($id)
-            ->update($validateData);
-
-        return redirect('nilai')->with('success' , 'new value has been added');
+        //
     }
 
     /**
@@ -106,10 +80,6 @@ class ValueController extends Controller
      */
     public function destroy($id)
     {
-        Value::where('id',$id)->delete();
-            
-        // alihkan halaman ke halaman pegawai
-  
-        return redirect('/nilai')->with('delete','Postingan Telah Dihapus');
+        //
     }
 }

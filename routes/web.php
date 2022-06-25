@@ -23,6 +23,9 @@ Route::get('/dashboard', function () {
 
 Route::resource('nilai', ValueController::class);
 
+Route::resource('tugas', TaskController::class);
+
+
 
 
 require __DIR__.'/auth.php';

@@ -77,17 +77,21 @@
                                 @php
                                     $i = 1 ; 
                                 @endphp
-                                @foreach ($values as $n)
+                                @foreach ($values as $value)
                                 <tr>
                                     <th scope="row"> {{ $i++ }}</th>
-                                    <th>{{ $n->nama_santri }}</th>
-                                    <th>{{ $n->kelas }}</th>
-                                    <th>{{ $n->mata_pelajaran }}</th>
-                                    <th>{{ $n->nilai }}</th>
-                                    <th>{{ $n->pengajar }}</th>
+                                    <th>{{ $value->nama_santri }}</th>
+                                    <th>{{ $value->kelas }}</th>
+                                    <th>{{ $value->mata_pelajaran }}</th>
+                                    <th>{{ $value->nilai }}</th>
+                                    <th>{{ $value->pengajar }}</th>
                                     <th>
-                                        <button class="btn btn-success"><i class="fa fa-edit"></i></button>
-                                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                        <a href="/nilai/{{ $value->id }}/edit" class="btn btn-success"><i class="fa fa-edit"></i></a>
+                                        <form action="/nilai/{{ $value->id }}" method="post" class="d-inline">
+                                            @method('delete')
+                                            @csrf
+                                            <button class="btn btn-danger" onclick="return confirm('Yakin mau menghapus data')"><i class="fa fa-trash"></i></button>
+                                        </form>
                                     </th>
                                 </tr>
                                 @endforeach
