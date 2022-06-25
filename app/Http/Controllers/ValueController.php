@@ -17,7 +17,7 @@ class ValueController extends Controller
     {
         //
         $data['values'] = Value::orderBy('id','desc')->paginate(5);
-        return view('nilai', $data);
+        return view('nilai.index', $data);
     }
 
     /**
@@ -27,7 +27,7 @@ class ValueController extends Controller
      */
     public function create()
     {
-        //
+        return view('nilai.create');
     }
 
     /**
@@ -38,7 +38,16 @@ class ValueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'nama_santri' => 'required',
+            'kelas' => 'required',
+            'mata_pelajaran' => 'required',
+            'nilai' => 'required',
+            'pengajar' => 'required',
+        ]);
+
+        Value::create($validateData);
+        return redirect('nilai')->with('success' , 'new value has been added');
     }
 
     /**

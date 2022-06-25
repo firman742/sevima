@@ -43,7 +43,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-lg-1 mt-0">
-                            <a href="/madidas/create" class="btn btn-warning rounded"><i class="ti-plus"></i></a>
+                            <a href="/nilai/create" class="btn btn-warning rounded"><i class="ti-plus"></i></a>
                         </div>
                         <div class="col-lg-11 mt-0">
                            
@@ -70,17 +70,25 @@
                                     <th>Mata Pelajaran</th>
                                     <th>Nilai</th>
                                     <th>Pengajar</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @php
+                                    $i = 1 ; 
+                                @endphp
                                 @foreach ($values as $n)
                                 <tr>
-                                    <th scope="row"> {{ $n->id }}</th>
+                                    <th scope="row"> {{ $i++ }}</th>
                                     <th>{{ $n->nama_santri }}</th>
                                     <th>{{ $n->kelas }}</th>
                                     <th>{{ $n->mata_pelajaran }}</th>
                                     <th>{{ $n->nilai }}</th>
                                     <th>{{ $n->pengajar }}</th>
+                                    <th>
+                                        <button class="btn btn-success"><i class="fa fa-edit"></i></button>
+                                        <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                    </th>
                                 </tr>
                                 @endforeach
                             </tbody>
