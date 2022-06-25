@@ -42,9 +42,11 @@
             <div class="card">
                 <div class="card-header">
                     <div class="row">
-                        <div class="col-lg-1 mt-0">
-                            <a href="/nilai/create" class="btn btn-warning rounded"><i class="ti-plus"></i></a>
-                        </div>
+                        @can('admin')
+                            <div class="col-lg-1 mt-0">
+                                <a href="/nilai/create" class="btn btn-warning rounded"><i class="ti-plus"></i></a>
+                            </div>
+                        @endcan
                         <div class="col-lg-11 mt-0">
                            
                         </div>
@@ -70,7 +72,9 @@
                                     <th>Mata Pelajaran</th>
                                     <th>Nilai</th>
                                     <th>Pengajar</th>
+                                    @can('admin')
                                     <th>Action</th>
+                                    @endcan
                                 </tr>
                             </thead>
                             <tbody class="border-bottom-2 border-dashed fs-9 fw-light align-middle">
@@ -86,12 +90,14 @@
                                     <th>{{ $value->nilai }}</th>
                                     <th>{{ $value->pengajar }}</th>
                                     <th>
-                                        <a href="/nilai/{{ $value->id }}/edit" class="btn btn-success"><i class="fa fa-edit"></i></a>
-                                        <form action="/nilai/{{ $value->id }}" method="post" class="d-inline">
-                                            @method('delete')
-                                            @csrf
-                                            <button class="btn btn-danger" onclick="return confirm('Yakin mau menghapus data')"><i class="fa fa-trash"></i></button>
-                                        </form>
+                                        @can('admin')
+                                            <a href="/nilai/{{ $value->id }}/edit" class="btn btn-success"><i class="fa fa-edit"></i></a>
+                                            <form action="/nilai/{{ $value->id }}" method="post" class="d-inline">
+                                                @method('delete')
+                                                @csrf
+                                                <button class="btn btn-danger" onclick="return confirm('Yakin mau menghapus data')"><i class="fa fa-trash"></i></button>
+                                            </form>
+                                        @endcan
                                     </th>
                                 </tr>
                                 @endforeach

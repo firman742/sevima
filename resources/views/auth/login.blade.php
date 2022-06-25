@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="header">
-            <img src="{{ asset('backend/assets/images/logodarussalam3.jpeg') }}" alt="" class="">
+            <img src="{{ asset('assets/images/logodarussalam3.jpeg') }}" alt="" class="">
         </x-slot>
 
         <!-- Session Status -->
@@ -34,17 +34,17 @@
             <div class="block mt-2">
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Ingat Saya') }}</span>
+                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember Me') }}</span>
                 </label>
             </div>
 
             <div class="d-flex align-items-center justify-content-between mt-4">
                 @if (Route::has('password.request'))
                     <a class="text-decoration-none" href="{{ route('password.request') }}">
-                        {{ __('Lupa Password?') }}
+                        {{ __('Forgot Password?') }}
                     </a>
                 @endif
-                    <a href="/register">Belum Punya Akun?</a>
+                    <a href="/register" class="text-decoration-none">Don't have an account?</a>
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>

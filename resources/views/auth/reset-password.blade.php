@@ -1,9 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+        <x-slot name="header">
+            <img src="{{ asset('assets/images/logodarussalam3.jpeg') }}" alt="" class="">
         </x-slot>
 
         <!-- Validation Errors -->

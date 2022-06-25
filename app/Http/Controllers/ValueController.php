@@ -15,6 +15,11 @@ class ValueController extends Controller
      */
     public function index()
     {
+
+        // if(auth()->check() || auth()->user()->username !== "hafidz firman abdullah"){
+        //     abort(403);
+        // }
+
         //
         $data['values'] = Value::orderBy('id','desc')->paginate(5);
         return view('nilai.index', $data);
@@ -110,6 +115,6 @@ class ValueController extends Controller
             
         // alihkan halaman ke halaman pegawai
   
-        return redirect('/nilai')->with('delete','value has been deldted');
+        return redirect('/nilai')->with('delete','value has been deleted');
     }
 }

@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="header">
-            <img src="{{ asset('backend/assets/images/logodarussalam3.jpeg') }}" alt="" class="">
+            <img src="{{ asset('assets/images/logodarussalam3.jpeg') }}" alt="" class="">
         </x-slot>
 
         <!-- Validation Errors -->

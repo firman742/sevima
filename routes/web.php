@@ -22,10 +22,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('nilai', ValueController::class);
-
-Route::resource('tugas', TaskController::class);
-
+Route::resource('tugas', TaskController::class)->middleware(['admin']);
+Route::resource('nilai', ValueController::class)->middleware(['auth']);
 
 
 

@@ -22,7 +22,7 @@
                 <div class="card">
                     <div class="card-block">
                         <div class="border border-dashed p-10">
-                            <form action="/nilai" method="POST" enctype="multipart/form-data ">
+                            <form action="/nilai" method="post" enctype="multipart/form-data ">
                                 @csrf
                                 <div class="mb-3 row">
                                     <label for="inputJudul" class="col-sm-2 col-form-label">Nama Santri</label>
